@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="312pt" height="278pt" viewBox="0.00 0.00 312.00 278.00">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 273.6)">
+<title>ER_Events</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-273.6 307.59,-273.6 307.59,4 -4,4"/>
+<!-- Events -->
+<g id="node1" class="node">
+<title>Events</title>
+<path fill="#ffffff" stroke="black" d="M291.59,-269.6C291.59,-269.6 135.53,-269.6 135.53,-269.6 129.53,-269.6 123.53,-263.6 123.53,-257.6 123.53,-257.6 123.53,-139.2 123.53,-139.2 123.53,-133.2 129.53,-127.2 135.53,-127.2 135.53,-127.2 291.59,-127.2 291.59,-127.2 297.59,-127.2 303.59,-133.2 303.59,-139.2 303.59,-139.2 303.59,-257.6 303.59,-257.6 303.59,-263.6 297.59,-269.6 291.59,-269.6"/>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-253" font-family="Times,serif" font-size="14.00">Events</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-236.2" font-family="Times,serif" font-size="14.00">id PK</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-219.4" font-family="Times,serif" font-size="14.00">title</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-202.6" font-family="Times,serif" font-size="14.00">description</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-185.8" font-family="Times,serif" font-size="14.00">date</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-169" font-family="Times,serif" font-size="14.00">location</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-152.2" font-family="Times,serif" font-size="14.00">organized_by_department_id</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-135.4" font-family="Times,serif" font-size="14.00">organized_by_user_id</text>
+</g>
+<!-- Notices -->
+<g id="node2" class="node">
+<title>Notices</title>
+<path fill="#ffffff" stroke="black" d="M264.37,-108.8C264.37,-108.8 162.75,-108.8 162.75,-108.8 156.75,-108.8 150.75,-102.8 150.75,-96.8 150.75,-96.8 150.75,-12 150.75,-12 150.75,-6 156.75,0 162.75,0 162.75,0 264.37,0 264.37,0 270.37,0 276.37,-6 276.37,-12 276.37,-12 276.37,-96.8 276.37,-96.8 276.37,-102.8 270.37,-108.8 264.37,-108.8"/>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-92.2" font-family="Times,serif" font-size="14.00">Notices</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-75.4" font-family="Times,serif" font-size="14.00">id PK</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-58.6" font-family="Times,serif" font-size="14.00">title</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-41.8" font-family="Times,serif" font-size="14.00">content</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-25" font-family="Times,serif" font-size="14.00">created_by_user_id</text>
+<text xml:space="preserve" text-anchor="middle" x="213.56" y="-8.2" font-family="Times,serif" font-size="14.00">published_date</text>
+</g>
+<!-- Departments -->
+<g id="node3" class="node">
+<title>Departments</title>
+<path fill="#ffffff" stroke="black" d="M75.53,-227.6C75.53,-227.6 12,-227.6 12,-227.6 6,-227.6 0,-221.6 0,-215.6 0,-215.6 0,-181.2 0,-181.2 0,-175.2 6,-169.2 12,-169.2 12,-169.2 75.53,-169.2 75.53,-169.2 81.53,-169.2 87.53,-175.2 87.53,-181.2 87.53,-181.2 87.53,-215.6 87.53,-215.6 87.53,-221.6 81.53,-227.6 75.53,-227.6"/>
+<text xml:space="preserve" text-anchor="middle" x="43.77" y="-211" font-family="Times,serif" font-size="14.00">Departments</text>
+<text xml:space="preserve" text-anchor="middle" x="43.77" y="-194.2" font-family="Times,serif" font-size="14.00">id PK</text>
+<text xml:space="preserve" text-anchor="middle" x="43.77" y="-177.4" font-family="Times,serif" font-size="14.00">name</text>
+</g>
+<!-- Departments&#45;&gt;Events -->
+<g id="edge1" class="edge">
+<title>Departments-&gt;Events</title>
+<path fill="none" stroke="black" d="M87.98,-198.4C95.45,-198.4 103.5,-198.4 111.77,-198.4"/>
+<polygon fill="black" stroke="black" points="111.65,-201.9 121.65,-198.4 111.65,-194.9 111.65,-201.9"/>
+</g>
+<!-- Users -->
+<g id="node4" class="node">
+<title>Users</title>
+<path fill="#ffffff" stroke="black" d="M66.59,-122C66.59,-122 20.94,-122 20.94,-122 14.94,-122 8.94,-116 8.94,-110 8.94,-110 8.94,-58.8 8.94,-58.8 8.94,-52.8 14.94,-46.8 20.94,-46.8 20.94,-46.8 66.59,-46.8 66.59,-46.8 72.59,-46.8 78.59,-52.8 78.59,-58.8 78.59,-58.8 78.59,-110 78.59,-110 78.59,-116 72.59,-122 66.59,-122"/>
+<text xml:space="preserve" text-anchor="middle" x="43.77" y="-105.4" font-family="Times,serif" font-size="14.00">Users</text>
+<text xml:space="preserve" text-anchor="middle" x="43.77" y="-88.6" font-family="Times,serif" font-size="14.00">id PK</text>
+<text xml:space="preserve" text-anchor="middle" x="43.77" y="-71.8" font-family="Times,serif" font-size="14.00">username</text>
+<text xml:space="preserve" text-anchor="middle" x="43.77" y="-55" font-family="Times,serif" font-size="14.00">role</text>
+</g>
+<!-- Users&#45;&gt;Events -->
+<g id="edge2" class="edge">
+<title>Users-&gt;Events</title>
+<path fill="none" stroke="black" d="M78.72,-107.47C89.2,-114.59 101.32,-122.82 113.89,-131.36"/>
+<polygon fill="black" stroke="black" points="111.61,-134.05 121.85,-136.77 115.55,-128.26 111.61,-134.05"/>
+</g>
+<!-- Users&#45;&gt;Notices -->
+<g id="edge3" class="edge">
+<title>Users-&gt;Notices</title>
+<path fill="none" stroke="black" d="M78.72,-78.33C96.17,-75.21 118.16,-71.28 139.24,-67.51"/>
+<polygon fill="black" stroke="black" points="139.77,-70.97 149,-65.76 138.54,-64.08 139.77,-70.97"/>
+</g>
+</g>
+</svg>
