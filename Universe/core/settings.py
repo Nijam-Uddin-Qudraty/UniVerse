@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-
+from datetime import timedelta
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -122,6 +124,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = 'users.CustomUser'
+
 
 CACHES = {
     "default": {
@@ -142,6 +146,27 @@ CELERY_RESULT_BACKEND = 'redis://localhost:6379/0'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
+            'rest_framework.authentication.SessionAuthentication',
     ),
 }
 
+SIMPLE_JWT = {
+    # lifetimes
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=2),         # short-lived access token
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),           # refresh token lifetime
+
+    # rotation + blacklisting
+    'ROTATE_REFRESH_TOKENS': True,                        # issue new refresh token on refresh
+    'BLACKLIST_AFTER_ROTATION': True,                     # blacklist old refresh token after rotation
+
+    # token settings
+    'AUTH_HEADER_TYPES': ('Bearer',),                     # Authorization: Bearer <token>
+    'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+    'ALGORITHM': 'HS256',
+    # optionally set your own secret / signing key via Django SECRET_KEY (default)
+    # 'SIGNING_KEY': SECRET_KEY,
+
+    # other options (defaults are usually fine)
+    # 'USER_ID_FIELD': 'id',
+    # 'USER_ID_CLAIM': 'user_id',
+}
